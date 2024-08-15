@@ -1,3 +1,5 @@
+
+
 @import "compass/css3";
 
 @import "compass/css3";
@@ -7,30 +9,35 @@
   box-sizing:border-box;
   font-family: "Cabin", sans-serif;
   text-align: center;
+  margin: 0;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+
 header{
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-color: #8d7254;
     text-align: center;
     position: relative;
     position: fixed;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     overflow: hidden;
     padding-left: 0;
     padding-right: 0;
 }
 
+.titulo {
+  display: flex;
+
+  justify-content: center;
+}
+
 header::before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
 }
 
 h1:hover{
@@ -43,18 +50,18 @@ h1:hover{
 h1{
     font-size: 42px;
     color: #fff;
-    line-height: 230px;
     text-transform: uppercase;
     font-weight: 100;
     transition: all .3s ease;
     font-weight: bold;
+    display: flex;
+    margin-top: 40px;
 }
 
 .imagem01 {
     margin-top: 300px;
     margin-right: 750px;
-    width: 450px;
-    height: 250px;
+    width: 300px;
     border-radius: 10px;
 }
 
@@ -66,10 +73,21 @@ h1{
 
 .imagem02 {
   width: 100px;
-  height: 100px;
   border-radius: 100px;
-  position:inherit;
-  margin-top: 15px;
+  display: flex;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.imagem02:hover {
+  box-shadow:0 4px 4px #ffffff;
+  transition: all .2s ease-in-out;
+  width: 115px;
+}
+
+.imagem02:active {
+  transition: all .2s ease-in-out;
+  transform: scale(0.97);
 }
 
 .span-1 {
@@ -100,4 +118,77 @@ a:hover {
   opacity: 0.7;
   text-decoration:rgb(58, 13, 13);
   font-weight: bold;
+}
+
+body {
+  transition: 2.0s linear;
+  background-color: #d3c8bb;
+  align-items: center;
+
+}
+
+/*Aqui é o começo do astronauta*/
+
+
+
+/*Aqui é o fim do astronauta*/
+
+/**footer*/
+
+.rodape{
+  background-color: #3b2205;
+  color: white;
+  height: auto;
+  width: 100%;
+  font-size: 14px;
+  font-family: helvetica;
+  left: 0 ;
+  right: 0 ;
+  top: 0 ;
+  bottom: 0 ;
+}
+.rodape a{
+  text-decoration: none;
+  color: white;
+}
+
+.rodape p{
+
+}
+
+.rodape-div{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  margin: auto;
+  align-items: stretch;
+  padding: 60px 10px 40px 10px;
+}
+
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+  display: flex;
+  width: calc(100% / 4 - 20px);
+  padding: 10px;
+}
+.rodape span{
+  font-size: 20px;
+  color: white;
+}
+.rodape-direitos{
+  width: calc(100% - 20px);
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+  
+}
+/*mobile*/
+@media (max-width: 768px) {
+  .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+      width: calc(50% - 20px);
+      padding: 10px;
+  }
+  .rodape-div{
+      padding: 60px 0px 40px 0px;
+  }
 }
